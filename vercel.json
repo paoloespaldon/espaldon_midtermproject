@@ -1,0 +1,11 @@
+{
+    "routes": [
+      { "src": "/index", "dest": "/index.html" },
+      { "src": "/Accommodation", "dest": "/Accommodation.html" },
+      { "src": "/Amenities", "dest": "/Amenities.html" },
+      { "src": "/Contact", "dest": "/Contact.html" },
+      { "src": "/BOOK", "dest": "/BOOK.html" }
+    
+    ]
+  }
+  

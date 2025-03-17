@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recidencia</title>
+    <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch-->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- Stylesheets -->
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="relative bg-blue-200 min-h-screen overscroll-none">
+    <!-- ==================== -->
+    <!-- Navigation Section -->
+    <!-- ==================== -->
+    <nav class="fixed top-0 left-0 w-full h-20 bg-blue-900/80 backdrop-blur-md shadow-lg px-5 flex justify-between items-center z-50">
+        <!-- Branding -->
+        <div class="flex items-center space-x-4 pl-10 mt-2">
+            <!-- Adjusted Logo -->
+            <div class="w-28 h-auto flex items-end">
+                <img src="assets/log.png" alt="Logo" class="w-full h-auto object-contain object-bottom">
+            </div>
+        </div>
+        
+    
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="index.html" class="text-base font-sans font-bold uppercase text-white underline transition hover:text-gray-300">Home</a></li>
+            <li><a href="Accommodation.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Accommodation</a></li>
+            <li><a href="Amenities.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Amenities</a></li>
+            <li><a href="Contact.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Contact</a></li>
+        </ul>
+    
+        <!-- Social Media & Mobile Menu -->
+        <div class="flex items-center space-x-4">
+            <!-- Desktop Social Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="https://web.facebook.com/recidenciadelhamor" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
+                    <i class="fab fa-facebook-f text-blue-600 text-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
+                    <i class="fab fa-instagram text-pink-600 text-lg"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Social & Menu -->
+            <div class="flex md:hidden items-center space-x-4">
+                <a href="https://web.facebook.com/recidenciadelhamor" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-9 w-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
+                    <i class="fab fa-facebook-f text-blue-600 text-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-9 w-9 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
+                    <i class="fab fa-instagram text-pink-600 text-lg"></i>
+                </a>
+            
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" class="text-gray-900" aria-label="Toggle navigation menu">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                
+            </div>
+            
+        </div>
+    </nav>
+    
+    <!-- ==================== -->
+    <!-- Mobile Menu -->
+    <!-- ==================== -->
+    <div id="mobile-menu" class="hidden fixed top-16 right-5 w-60 bg-blue-500/70 backdrop-blur-md shadow-xl rounded-lg p-6 flex flex-col items-start space-y-4 text-white text-lg transition-all duration-300 transform scale-95 z-[9999]">
+        <a href="index.html" class="block w-full text-left px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Home</a>
+        <a href="Accommodation.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Accommodation</a>
+        <a href="Amenities.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Amenities</a>
+        <a href="Contact.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Contact</a>
+        <button id="close-menu" class="absolute top-2 right-3 text-white text-3xl hover:text-gray-400 transition" aria-label="Close menu">&times;</button>
+    </div>
+
+    <!-- ==================== -->
+    <!-- Hero Section -->
+    <!-- ==================== -->
+    <div id="hero" class="relative w-full h-screen bg-cover bg-center bg-no-repeat transition-all duration-500"
+         style="background-image: url('assets/hero1.webp');">
+        <header class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 z-10 bg-black/50">
+            <h2 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg animate-fade-in font-['Playfair_Display'] text-white">
+                Serenity by the Nature
+            </h2>
+            <p class="mt-4 text-lg md:text-xl max-w-lg drop-shadow-md font-['Merriweather'] text-stone-300 italic">
+                Escape to crystal waters and pure relaxation
+            </p>
+            <a href="BOOK.html" class="mt-6 bg-blue-500/50 backdrop-blur-md text-white font-bold px-8 py-4 rounded-full shadow-2xl hover:bg-blue-500/70 transition font-['Poppins']">
+                Book Now
+            </a>
+        </header>
+
+        <!-- Hero Slider Controls -->
+        <button id="prevBtn" 
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full shadow-md hover:bg-black/70 transition z-20"
+                aria-label="Previous slide">
+            &#10094;
+        </button>
+        <button id="nextBtn" 
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full shadow-md hover:bg-black/70 transition z-20"
+                aria-label="Next slide">
+            &#10095;
+        </button>
+    </div>
+
+    <!-- Hero Section Styles -->
+    <style>
+        #hero {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            image-rendering: crisp-edges;
+            filter: contrast(1.1) brightness(1.2) saturate(1.1);
+            transition: filter 0.3s ease-in-out;
+        }
+    </style>
+
+
+
+
+
+
+    <!-- ==================== -->
+    <!-- Content Sections -->
+    <!-- ==================== -->
+    <div class="w-full lg:w-1/2 p-4 mx-auto text-center flex flex-col justify-center mb-4">
+        <h3 class="text-2xl sm:text-3xl font-bold text-black">
+            Experience Tranquility at Recidencia Del Hamor in Sorsogon, Philippines
+        </h3>
+        <p class="text-black mt-2 text-sm sm:text-base">
+            At Recidencia Del Hamor, guests can expect a warm and welcoming atmosphere from the moment they arrive. 
+            Check-in time begins at 02:00 PM, allowing ample time for travelers to settle in and start their vacation 
+            on a relaxed note.
+        </p>
+    </div>
+    
+    <!-- Image/Text Blocks -->
+    <div class="flex justify-center items-center min-h-screen px-4 py-8">
+    <div class="w-full max-w-7xl">
+        <div class="grid grid-cols-1 gap-16">
+
+         
+
+
+            <div class="flex flex-col lg:flex-row gap-4 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="p-2 bg-white rounded-lg shadow-lg"> 
+                        <img src="assets/section1.webp" 
+                             alt="Resort view"
+                             class="w-full h-64 sm:h-96 max-h-[500px] object-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 p-2 flex flex-col justify-center space-y-2 text-left">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">A Luxurious Escape</h2>
+                    <p class="text-black text-lg sm:text-xl font-normal">
+                        Enjoy breathtaking views of Mt. Bulusan and Sorsogon Bay. Relax in private plunge pools 
+                        and four infinity pools, indulge in spa services, and savor exquisite yet affordable cuisine.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Adventure & Activities -->
+            <div class="flex flex-col lg:flex-row-reverse gap-4 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="p-2 bg-white rounded-lg shadow-lg"> 
+                        <img src="assets/section2.webp" 
+                             alt="Sports facilities"
+                             class="w-full h-64 sm:h-96 max-h-[500px] object-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 p-2 flex flex-col justify-center space-y-2 text-left">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Adventure Awaits</h2>
+                    <p class="text-black text-lg sm:text-xl font-normal">
+                        From hiking trails to water sports, guests can enjoy an active and invigorating stay. Explore the natural beauty of Sorsogon, embark on guided treks, or enjoy a relaxing sunset kayak ride.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Dining Experience -->
+            <div class="flex flex-col lg:flex-row gap-4 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="p-2 bg-white rounded-lg shadow-lg"> 
+                        <img src="assets/section3.webp" 
+                             alt="Restaurant dining"
+                             class="w-full h-64 sm:h-96 max-h-[500px] object-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 p-2 flex flex-col justify-center space-y-2 text-left">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Culinary Delights</h2>
+                    <p class="text-black text-lg sm:text-xl font-normal">
+                        Our on-site restaurant serves a diverse menu of local and international dishes to satisfy every craving. Whether you seek a refreshing smoothie, a gourmet feast, or a cozy coffee break, we have you covered.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Nearby Attractions -->
+            <div class="flex flex-col lg:flex-row-reverse gap-4 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="p-2 bg-white rounded-lg shadow-lg"> 
+                        <img src="assets/section4.webp" 
+                             alt="Nearby attractions"
+                             class="w-full h-64 sm:h-96 max-h-[500px] object-cover rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 p-2 flex flex-col justify-center space-y-2 text-left">
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">Explore Sorsogon</h2>
+                    <p class="text-black text-lg sm:text-xl font-normal">
+                        Nestled in the province of Sorsogon, Recidencia Del Hamor offers easy access to stunning landscapes and historical landmarks. Visit Sabang Beach, explore lush rainforests, or take a cultural trip to local heritage sites.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+    <!-- ==================== -->
+    <!-- Scripts -->
+    <!-- ==================== -->
+    <script>
+        // Mobile Menu Functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        // Toggle menu visibility
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('scale-100');
+        });
+
+        // Close menu handlers
+        closeMenu.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        
+        document.addEventListener('click', (event) => {
+            if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Responsive menu behavior
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Hero Image Slider
+        document.addEventListener("DOMContentLoaded", function() {
+            const sliderImages = [
+                "assets/hero1.webp",
+                "assets/hero2.webp",
+                "assets/hero3.webp"
+            ];
+
+            let currentImageIndex = 0;
+            let autoSlideInterval;
+
+            // Update background image
+            function updateHeroBackground() {
+                document.getElementById("hero").style.backgroundImage = 
+                    `url(${sliderImages[currentImageIndex]})`;
+            }
+
+            // Navigation functions
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+                updateHeroBackground();
+                resetAutoSlide();
+            }
+
+            function showPreviousImage() {
+                currentImageIndex = (currentImageIndex - 1 + sliderImages.length) % sliderImages.length;
+                updateHeroBackground();
+                resetAutoSlide();
+            }
+
+            // Auto-slide management
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(showNextImage, 5000);
+            }
+
+            // Event listeners
+            document.getElementById("nextBtn").addEventListener("click", showNextImage);
+            document.getElementById("prevBtn").addEventListener("click", showPreviousImage);
+
+            // Initialize auto-slide
+            autoSlideInterval = setInterval(showNextImage, 5000);
+        });
+
+        
+    </script>
+
+    
+<footer class="bg-blue-900/80 backdrop-blur-md text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Branding and Description -->
+            <div class="space-y-2">
+                <div class="w-20 h-auto">
+                    <img src="assets/log.png" alt="Logo" class="w-full h-auto object-contain">
+                </div>
+                <p class="text-xs text-gray-300">
+                    Recidencia Del Hamor offers a luxurious escape in the heart of Sorsogon.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-2">
+                <h3 class="text-sm font-semibold">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>
+                        Barangay Inlagadian, Casiguran, Sorsogon 4702, Philippines
+                    </li>
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-phone text-blue-500 mr-1"></i>
+                        0906 361 9592
+                    </li>
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-envelope text-blue-500 mr-1"></i>
+                        reservations@recidenciadelhamor.com.ph
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="border-t border-gray-700 mt-4 pt-4 text-center">
+            <p class="text-xs text-gray-300">
+                &copy; 2025 Recidencia Del Hamor. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

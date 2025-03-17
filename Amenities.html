@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recidencia</title>
+    <link rel="icon" type="image/png" href="assets/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+          
+
+
+    <!-- Stylesheets -->
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="relative bg-blue-200 min-h-screen overscroll-none">
+    <!-- ==================== -->
+    <!-- Navigation Section -->
+    <!-- ==================== -->
+    <nav class="fixed top-0 left-0 w-full h-20 bg-blue-900/80 backdrop-blur-md shadow-lg px-5 flex justify-between items-center z-50">
+        <!-- Branding -->
+        <div class="flex items-center space-x-4 pl-10 mt-2">
+            <!-- Adjusted Logo -->
+            <div class="w-28 h-auto flex items-end">
+                <img src="assets/log.png" alt="Logo" class="w-full h-auto object-contain object-bottom">
+            </div>
+        </div>
+        
+    
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="index.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Home</a></li>
+            <li><a href="Accommodation.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Accommodation</a></li>
+            <li><a href="Amenities.htmlS" class="text-base font-sans font-bold uppercase text-white underline transition hover:text-gray-300">Amenities</a></li>
+            <li><a href="Contact.html" class="text-base font-sans font-bold uppercase text-gray-900 hover:text-white transition">Contact</a></li>
+        </ul>
+    
+        <!-- Social Media & Mobile Menu -->
+        <div class="flex items-center space-x-4">
+            <!-- Desktop Social Links -->
+            <div class="hidden md:flex space-x-4">
+                <a href="https://web.facebook.com/recidenciadelhamor" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
+                    <i class="fab fa-facebook-f text-blue-600 text-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-10 w-10 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
+                    <i class="fab fa-instagram text-pink-600 text-lg"></i>
+                </a>
+            </div>
+            
+            <!-- Mobile Social & Menu -->
+            <div class="flex md:hidden items-center space-x-4">
+                <a href="https://web.facebook.com/recidenciadelhamor" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-9 w-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
+                    <i class="fab fa-facebook-f text-blue-600 text-lg"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                   class="flex-shrink-0 h-9 w-9 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
+                    <i class="fab fa-instagram text-pink-600 text-lg"></i>
+                </a>
+            
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" class="text-gray-900" aria-label="Toggle navigation menu">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                
+            </div>
+            
+        </div>
+    </nav>
+    
+    <!-- ==================== -->
+    <!-- Mobile Menu -->
+    <!-- ==================== -->
+    <div id="mobile-menu" class="hidden fixed top-16 right-5 w-60 bg-blue-500/70 backdrop-blur-md shadow-xl rounded-lg p-6 flex flex-col items-start space-y-4 text-white text-lg transition-all duration-300 transform scale-95 z-[9999]">
+        <a href="index.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Home</a>
+        <a href="Accommodation.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Accommodation</a>
+        <a href="Amenities.html" class="block w-full text-left px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Amenities</a>
+        <a href="Contact.html" class="block w-full text-left text-black px-4 py-2 hover:bg-white hover:text-black rounded-lg transition">Contact</a>
+        <button id="close-menu" class="absolute top-2 right-3 text-white text-3xl hover:text-gray-400 transition" aria-label="Close menu">&times;</button>
+    </div>
+   
+    
+    <div class="max-w-7xl mx-auto px-6 py-12 pt-24">
+
+      
+            <!-- Hero Section -->
+            <div class="relative h-screen">
+                <!-- Background Image with Overlay -->
+                <div class="absolute inset-0">
+                    <img src="assets/amt.webp" alt="Hotel Amenities" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                </div>
+            
+                <!-- Content Section -->
+                <div class="relative h-full flex items-center justify-center text-center">
+                    <div class="max-w-4xl px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Discover Our World-Class Amenities</h1>
+                        <p class="text-xl md:text-2xl text-white mb-8">
+                            From luxurious pools to state-of-the-art fitness centers, we offer everything you need for an unforgettable stay.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Amenities Section -->
+            <div class="container mx-auto px-4 py-16">
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="h-1 w-12 bg-gold-400 rounded"></div>
+                        <h2 class="px-4 text-3xl font-bold text-gray-800">Our Premium Amenities</h2>
+                        <div class="h-1 w-12 bg-gold-400 rounded"></div>
+                    </div>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Indulge in world-class facilities and services designed for your ultimate comfort and convenience.</p>
+                </div>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cleanliness & Safety -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl" data-aos="fade-up">
+                        <div class="flex items-start space-x-4">
+                            <!-- Icon Section -->
+                            <div class="p-3 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i> <!-- Icon in blue -->
+                            </div>
+                    
+                            <!-- Content Section -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-2 text-gray-800">Cleanliness & Safety</h3>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i> Daily disinfection in all rooms & common areas
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i> Staff trained in safety protocols
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i> Face coverings & protective screens
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check text-blue-500 mr-3"></i> Hand sanitizers available
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dining & Refreshments -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-utensils text-blue-600 text-2xl"></i> <!-- Icon changed to blue -->
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Dining & Refreshments</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-coffee text-blue-500 mr-2"></i> Free continental breakfast</li>
+                                    <li class="flex items-center"><i class="fas fa-mug-hot text-blue-500 mr-2"></i> On-site coffee shop & restaurant</li>
+                                    <li class="flex items-center"><i class="fas fa-concierge-bell text-blue-500 mr-2"></i> Room service available</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Convenience & Services -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-concierge-bell text-blue-600 text-2xl"></i> <!-- Icon changed to blue -->
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Convenience & Services</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-clock text-blue-500 mr-2"></i> 24-hour front desk & security</li>
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Express & private check-in/out</li>
+                                    <li class="flex items-center"><i class="fas fa-bell text-blue-500 mr-2"></i> Concierge & luggage storage</li>
+                                    <li class="flex items-center"><i class="fas fa-broom text-blue-500 mr-2"></i> Daily housekeeping & ironing service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Family-Friendly Services -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300" data-aos="fade-up">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-child text-blue-600 text-2xl"></i> <!-- Icon changed to blue -->
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Family-Friendly Services</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-home text-blue-500 mr-2"></i> Family rooms available</li>
+                                    <li class="flex items-center"><i class="fas fa-smile text-blue-500 mr-2"></i> Child-friendly environment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transportation & Accessibility -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-car text-blue-600 text-2xl"></i> <!-- Icon changed to blue -->
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Transportation & Accessibility</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-parking text-blue-500 mr-2"></i> Free on-site parking</li>
+                                    <li class="flex items-center"><i class="fas fa-plane text-blue-500 mr-2"></i> Airport transfer & rental car service</li>
+                                    <li class="flex items-center"><i class="fas fa-bicycle text-blue-500 mr-2"></i> Bicycle & sports equipment rental</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- In-Room Amenities -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-100 rounded-lg">
+                                <i class="fas fa-bed text-blue-600 text-2xl"></i> <!-- Icon changed to blue -->
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">In-Room Amenities</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center"><i class="fas fa-snowflake text-blue-500 mr-2"></i> Air conditioning & heating</li>
+                                    <li class="flex items-center"><i class="fas fa-umbrella-beach text-blue-500 mr-2"></i> Balcony/terrace (selected rooms)</li>
+                                    <li class="flex items-center"><i class="fas fa-bath text-blue-500 mr-2"></i> Bathrobes, slippers & toiletries</li>
+                                    <li class="flex items-center"><i class="fas fa-tv text-blue-500 mr-2"></i> Satellite/cable channels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+          
+        
+            <!-- Call to Action Section -->
+            
+        
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+    
+        
+        <script>
+            // Mobile Menu Functionality
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenu = document.getElementById('close-menu');
+    
+            // Toggle menu visibility
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('scale-100');
+            });
+    
+            // Close menu handlers
+            closeMenu.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            
+            document.addEventListener('click', (event) => {
+                if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+    
+            // Responsive menu behavior
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        </script>
+    
+       
+<footer class="bg-blue-900/80 backdrop-blur-md text-white py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Branding and Description -->
+            <div class="space-y-2">
+                <div class="w-20 h-auto">
+                    <img src="assets/log.png" alt="Logo" class="w-full h-auto object-contain">
+                </div>
+                <p class="text-xs text-gray-300">
+                    Recidencia Del Hamor offers a luxurious escape in the heart of Sorsogon.
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-2">
+                <h3 class="text-sm font-semibold">Contact Us</h3>
+                <ul class="space-y-1">
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>
+                        Barangay Inlagadian, Casiguran, Sorsogon 4702, Philippines
+                    </li>
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-phone text-blue-500 mr-1"></i>
+                        0906 361 9592
+                    </li>
+                    <li class="text-xs text-gray-300">
+                        <i class="fas fa-envelope text-blue-500 mr-1"></i>
+                        reservations@recidenciadelhamor.com.ph
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="border-t border-gray-700 mt-4 pt-4 text-center">
+            <p class="text-xs text-gray-300">
+                &copy; 2025 Recidencia Del Hamor. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+    </body>
+    </html>
+    
