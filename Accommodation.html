@@ -92,10 +92,22 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 w-full max-w-6xl">
             
   <!-- Accommodation Card -->
+<!-- Accommodation Card -->
 <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
-    <img src="assets/room1.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(0, 0)">
-    <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
-    
+    <div class="relative">
+        <img src="assets/room1.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(0, 0)">
+        
+        <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
+            Available 2 rooms
+        </div>
+
+        <!-- Price tag in the top-left corner -->
+        <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+            ₱4,270/night
+        </div>
+    </div>
+
     <div class="p-4 text-left flex-grow">
         <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Deluxe Villa</h3>
         <div class="flex justify-between items-center text-gray-700 text-sm mt-2">
@@ -104,19 +116,31 @@
             <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
         </div>
     </div>
-    
+
     <div class="flex justify-center mt-3 pb-4">
         <a href="BOOK.html" class="w-40 bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-            See Availability
+            Book Now
         </a>
     </div>
 </div>
 
+
 <!-- Repeat for the other cards -->
 <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
-    <img src="assets/room2.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(1, 0)">
-    <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
-    
+    <div class="relative">
+        <img src="assets/room2.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(1, 0)">
+
+        <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
+            Available 2 rooms
+        </div>
+
+        <!-- Price tag in the top-left corner -->
+        <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+            ₱4,270/night
+        </div>
+    </div>
+
     <div class="p-4 text-left flex-grow">
         <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Luxury Suite</h3>
         <div class="flex justify-between items-center text-gray-700 text-sm mt-2">
@@ -125,18 +149,29 @@
             <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
         </div>
     </div>
-    
+
     <div class="flex justify-center mt-3 pb-4">
         <a href="BOOK.html" class="w-40 bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-            See Availability
+            Book Now
         </a>
     </div>
 </div>
 
 <!-- Another Beach Cottage -->
 <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
-    <img src="assets/room3.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(2, 0)">
-    <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
+    <div class="relative">
+        <img src="assets/room3.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(2, 0)">
+
+        <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
+            Available 2 rooms
+        </div>
+
+        <!-- Price tag in the top-left corner -->
+        <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+            ₱5,000/night
+        </div>
+    </div>
 
     <div class="p-4 text-left flex-grow">
         <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Duplex Villa Private Pool</h3>
@@ -149,10 +184,11 @@
     
     <div class="flex justify-center mt-3 pb-4">
         <a href="BOOK.html" class="w-40 bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-            See Availability
+            Book Now
         </a>
     </div>
 </div>
+
 
             
             
@@ -161,7 +197,12 @@
                 <img src="assets/room4.webp" 
                 class="w-full h-60 object-cover cursor-pointer" 
                 onclick="openModal(3, 0)">
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
+                 <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
+            Available 2 rooms
+        </div>
+
+                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,000/night</div>
 
                 <div class="p-4 text-left">
                     <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Suite Room</h3>
@@ -181,7 +222,7 @@
                     </div>
                     <div class="flex justify-center mt-4">
                         <a href="BOOK.html" class="w-40 bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            See Availability
+                            Bok Now
                         </a>
                     </div>
                     
@@ -193,7 +234,12 @@
                 <img src="assets/room5.webp" 
                 class="w-full h-60 object-cover cursor-pointer" 
                 onclick="openModal(4, 0)">
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
+                 <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
+            Available 2 rooms
+        </div>
+
+                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,500/night</div>
 
                 <div class="p-4 text-left">
                     <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Duplex Villa</h3>
@@ -212,7 +258,7 @@
                     </div>
                     <div class="flex justify-center mt-3">
                         <a href="B" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            See Availability
+                            Book Now
                         </a>
                     </div>
                 </div>
@@ -222,7 +268,12 @@
                 <img src="assets/room6.webp" 
                 class="w-full h-60 object-cover cursor-pointer" 
                 onclick="openModal(5, 0)">
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">$127/night</div>
+                 <!-- "Available" text inside the image at the bottom center -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-red-500 text-sm font-semibold">
+            Not Available
+        </div>
+
+                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,000/night</div>
 
                 <div class="p-4 text-left">
                     <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Panoramic Duplex Villa with Pool</h3>
@@ -242,14 +293,11 @@
                     </div>
                     <div class="flex justify-center mt-3">
                         <a href="B" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            See Availability
+                            Book Now
                         </a>
                     </div>
                 </div>
             </div>
-
-           
-            
 
             
             
