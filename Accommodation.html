@@ -20,15 +20,14 @@
     <!-- ==================== -->
     <!-- Navigation Section -->
     <!-- ==================== -->
-    <nav class="fixed top-0 left-0 w-full h-20 bg-blue-900/80 backdrop-blur-md shadow-lg px-5 flex justify-between items-center z-50">
+    <nav class="fixed top-0 left-0 w-full h-16 md:h-24 bg-blue-900/80 backdrop-blur-md shadow-lg px-4 md:px-5 flex justify-between items-center z-50">
         <!-- Branding -->
-        <div class="flex items-center space-x-4 pl-10 mt-2">
+        <div class="flex items-center space-x-4 pl-4 md:pl-10 mt-2 md:mt-4"> <!-- Adjusted padding and margin for responsiveness -->
             <!-- Adjusted Logo -->
-            <div class="w-28 h-auto flex items-end">
+            <div class="w-20 md:w-28 h-auto flex items-end"> <!-- Adjusted logo width for smaller screens -->
                 <img src="assets/log.png" alt="Logo" class="w-full h-auto object-contain object-bottom">
             </div>
         </div>
-        
     
         <!-- Desktop Navigation -->
         <ul class="hidden md:flex space-x-6">
@@ -51,27 +50,25 @@
                     <i class="fab fa-instagram text-pink-600 text-lg"></i>
                 </a>
             </div>
-            
+    
             <!-- Mobile Social & Menu -->
             <div class="flex md:hidden items-center space-x-4">
                 <a href="https://web.facebook.com/recidenciadelhamor" target="_blank" rel="noopener noreferrer"
-                   class="flex-shrink-0 h-9 w-9 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
+                   class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition">
                     <i class="fab fa-facebook-f text-blue-600 text-lg"></i>
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                   class="flex-shrink-0 h-9 w-9 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
+                   class="flex-shrink-0 h-8 w-8 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition">
                     <i class="fab fa-instagram text-pink-600 text-lg"></i>
                 </a>
-            
+    
                 <!-- Mobile Menu Toggle -->
                 <button id="menu-toggle" class="text-gray-900" aria-label="Toggle navigation menu">
                     <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
-                
             </div>
-            
         </div>
     </nav>
     
@@ -96,11 +93,6 @@
 <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
     <div class="relative">
         <img src="assets/room1.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(0, 0)">
-        
-        <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
-            Available 2 rooms
-        </div>
 
         <!-- Price tag in the top-left corner -->
         <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
@@ -108,16 +100,17 @@
         </div>
     </div>
 
-    <div class="p-4 text-left flex-grow">
-        <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Deluxe Villa</h3>
-        <div class="flex justify-between items-center text-gray-700 text-sm mt-2">
+    <div class="p-3 text-left flex-grow relative">
+        <div class="text-green-500 text-sm font-semibold text-center mb-1">Available 2 rooms</div>
+        <h3 class="text-xl font-bold text-gray-900 text-center">Deluxe Villa</h3>
+        <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
             <div class="flex items-center gap-1"><i class="fa-solid fa-water"></i> Pool View</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
         </div>
     </div>
 
-    <div class="flex justify-center mt-3 pb-4">
+    <div class="flex justify-center mt-2 pb-3">
         <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
             Book Now
         </a>
@@ -130,42 +123,36 @@
     <div class="relative">
         <img src="assets/room2.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(1, 0)">
 
-        <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
-            Available 2 rooms
-        </div>
-
         <!-- Price tag in the top-left corner -->
         <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
             ₱4,270/night
         </div>
     </div>
 
-    <div class="p-4 text-left flex-grow">
-        <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Luxury Suite</h3>
-        <div class="flex justify-between items-center text-gray-700 text-sm mt-2">
+    <div class="p-3 text-left flex-grow relative">
+        <div class="text-green-500 text-sm font-semibold text-center mb-1">Available 2 rooms</div>
+        <h3 class="text-xl font-bold text-gray-900 text-center">Luxury Suite</h3>
+        <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
             <div class="flex items-center gap-1"><i class="fa-solid fa-seedling"></i> Garden View</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
         </div>
     </div>
 
-    <div class="flex justify-center mt-3 pb-4">
+    <div class="flex justify-center mt-2 pb-3">
         <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
             Book Now
         </a>
     </div>
 </div>
 
+
+
+
 <!-- Another Beach Cottage -->
 <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
     <div class="relative">
         <img src="assets/room3.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(2, 0)">
-
-        <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
-            Available 2 rooms
-        </div>
 
         <!-- Price tag in the top-left corner -->
         <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
@@ -173,16 +160,17 @@
         </div>
     </div>
 
-    <div class="p-4 text-left flex-grow">
-        <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Duplex Villa Private Pool</h3>
-        <div class="flex justify-between items-center text-gray-700 text-sm mt-2">
+    <div class="p-3 text-left flex-grow relative">
+        <div class="text-green-500 text-sm font-semibold text-center mb-1">Available 2 rooms</div>
+        <h3 class="text-xl font-bold text-gray-900 text-center">Duplex Villa Private Pool</h3>
+        <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
             <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-ban-smoking"></i> Non-Smoking</div>
             <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
         </div>
     </div>
-    
-    <div class="flex justify-center mt-3 pb-4">
+
+    <div class="flex justify-center mt-2 pb-3">
         <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
             Book Now
         </a>
@@ -190,113 +178,94 @@
 </div>
 
 
+
             
             
 
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden relative">
-                <img src="assets/room4.webp" 
-                class="w-full h-60 object-cover cursor-pointer" 
-                onclick="openModal(3, 0)">
-                 <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
-            Available 2 rooms
+<div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
+    <div class="relative">
+        <img src="assets/room4.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(3, 0)">
+
+        <!-- Price tag in the top-left corner -->
+        <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+            ₱6,000/night
         </div>
+    </div>
 
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,000/night</div>
+    <div class="p-3 text-left flex-grow relative">
+        <div class="text-green-500 text-sm font-semibold text-center mb-1">Available 2 rooms</div>
+        <h3 class="text-xl font-bold text-gray-900 text-center">Suite Room</h3>
+        <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
+            <div class="flex items-center gap-1"><i class="fa-solid fa-seedling"></i> Garden View</div>
+            <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
+            <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 2 Queen Beds</div>
+        </div>
+    </div>
 
-                <div class="p-4 text-left">
-                    <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Suite Room</h3>
-                    <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-seedling"></i> Garden View
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-landmark"></i> Balcony
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-bed"></i> 2 Queen Beds
-                        </div>
-                        
-                    </div>
-                    <div class="flex justify-center mt-4">
-                        <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            Book Now
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
+    <div class="flex justify-center mt-2 pb-3">
+        <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
+            Book Now
+        </a>
+    </div>
+</div>
+
 
             <!-- Another Beach Cottage -->
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden relative">
-                <img src="assets/room5.webp" 
-                class="w-full h-60 object-cover cursor-pointer" 
-                onclick="openModal(4, 0)">
-                 <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-green-500 text-sm font-semibold">
-            Available 2 rooms
-        </div>
-
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,500/night</div>
-
-                <div class="p-4 text-left">
-                    <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Duplex Villa</h3>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
+                <div class="relative">
+                    <img src="assets/room5.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(4, 0)">
+            
+                    <!-- Price tag in the top-left corner -->
+                    <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+                        ₱6,500/night
+                    </div>
+                </div>
+            
+                <div class="p-3 text-left flex-grow relative">
+                    <div class="text-green-500 text-sm font-semibold text-center mb-1">Available 2 rooms</div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center">Duplex Villa</h3>
                     <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-seedling"></i> Garden View
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-landmark"></i> Balcony
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-bed"></i> 2 Queen Beds
-                        </div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-seedling"></i> Garden View</div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 2 Queen Beds</div>
                     </div>
-                    <div class="flex justify-center mt-3">
-                        <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            Book Now
-                        </a>
-                    </div>
+                </div>
+            
+                <div class="flex justify-center mt-2 pb-3">
+                    <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
+                        Book Now
+                    </a>
                 </div>
             </div>
             
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden relative">
-                <img src="assets/room6.webp" 
-                class="w-full h-60 object-cover cursor-pointer" 
-                onclick="openModal(5, 0)">
-                 <!-- "Available" text inside the image at the bottom center -->
-        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-red-500 text-sm font-semibold">
-            Not Available
-        </div>
-
-                <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded"> ₱6,000/night</div>
-
-                <div class="p-4 text-left">
-                    <h3 class="text-xl font-bold text-gray-900 text-center mt-2">Panoramic Duplex Villa with Pool</h3>
-                    <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-water"></i> Pool View
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-landmark"></i> Balcony
-                        </div>
-                        
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-bed"></i> 1 Queen Bed
-                        </div>
-                        
-                    </div>
-                    <div class="flex justify-center mt-3">
-                        <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
-                            Book Now
-                        </a>
+            
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden relative flex flex-col h-full">
+                <div class="relative">
+                    <img src="assets/room6.webp" class="w-full h-60 object-cover cursor-pointer" onclick="openModal(5, 0)">
+            
+                    <!-- Price tag in the top-left corner -->
+                    <div class="absolute top-2 left-2 bg-green-600 text-white text-sm font-bold px-3 py-1 rounded">
+                        ₱6,000/night
                     </div>
                 </div>
+            
+                <div class="p-3 text-left flex-grow relative">
+                    <div class="text-red-500 text-sm font-semibold text-center mb-1">Not Available</div>
+                    <h3 class="text-xl font-bold text-gray-900 text-center">Panoramic Duplex Villa with Pool</h3>
+                    <div class="flex justify-between items-center text-gray-700 text-sm mt-1">
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-water"></i> Pool View</div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-landmark"></i> Balcony</div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-bed"></i> 1 Queen Bed</div>
+                    </div>
+                </div>
+            
+                <div class="flex justify-center mt-2 pb-3">
+                    <a href="BOOK.html" class="bg-blue-600 text-white font-medium text-sm text-center px-4 py-2 rounded-md transition duration-200 hover:bg-blue-700">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+            
             </div>
 
             
