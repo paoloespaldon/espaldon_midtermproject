@@ -32,19 +32,19 @@
       <!-- Step 1 -->
       <div class="flex flex-col items-center z-10 w-1/2">
           <div id="step1"
-              class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white font-bold text-base border-4 border-white shadow-md transition-all duration-300">
+              class="bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center text-white font-bold text-base border-4 border-black shadow-md transition-all duration-300">
               1
           </div>
           <span class="mt-1 text-xs font-medium text-blue-600">Dates & Room</span>
       </div>
 
       <!-- Connecting Line -->
-      <div class="absolute top-5 left-1/4 w-1/2 h-1 bg-gray-300 z-0"></div>
+      <div class="absolute top-5 left-1/4 w-1/2 h-1 bg-black z-0"></div>
 
       <!-- Step 2 -->
       <div class="flex flex-col items-center z-10 w-1/2">
           <div id="step2"
-              class="bg-gray-300 rounded-full h-10 w-10 flex items-center justify-center text-gray-600 font-bold text-base border-4 border-white shadow-md transition-all duration-300">
+              class="bg-gray-300 rounded-full h-10 w-10 flex items-center justify-center text-gray-600 font-bold text-base border-4 border-black shadow-md transition-all duration-300">
               2
           </div>
           <span class="mt-1 text-xs font-medium text-gray-600">Personal Info</span>
@@ -92,7 +92,7 @@
         <div class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500"></div>
         <div class="relative">
           <img src="assets/room1.webp" alt="King Room" class="w-full h-56 object-cover transform group-hover:scale-105 transition-all duration-300">
-          <p class="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1"> ₱4,270/night</p>
+          <p class="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1">₱4,270/night</p>
 
         </div>
         <div class="p-3 text-center">
@@ -106,7 +106,7 @@
         <div class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500"></div>
         <div class="relative">
           <img src="assets/room2.webp" alt="Twin Room" class="w-full h-56 object-cover transform group-hover:scale-105 transition-all duration-300">
-          <p class="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1"> ₱4,270/night</p>
+          <p class="absolute top-2 left-2 bg-green-600 text-white text-xs font-medium px-2 py-1">₱4,270/night</p>
 
         </div>
         <div class="p-3 text-center">
@@ -347,12 +347,54 @@ function showMessage(text, colorClass) {
 
   // Function to move to the next step
   function nextStep() {
-      if (currentStep < 2) {
-          currentStep++;
-          updateStepper();
-          showStepContent();
-      }
-  }
+    // Get input values
+    const checkin = document.querySelector('input[type="date"]').value;
+    const checkout = document.querySelectorAll('input[type="date"]')[1].value;
+    const room = document.querySelector('input[name="room"]:checked');
+
+    // Validation check
+    if (!checkin || !checkout) {
+        showMessage("Please select both check-in and check-out dates.", "text-red-600");
+        return;
+    }
+
+    if (!room) {
+        showMessage("Please select a room before proceeding.", "text-red-600");
+        return;
+    }
+
+    // Move to the next step
+    if (currentStep < 2) {
+        currentStep++;
+        updateStepper();
+        showStepContent();
+        hideMessage(); // Auto-hide notification after switching step
+    }
+}
+
+// Function to display messages
+function showMessage(text, colorClass) {
+    let message = document.getElementById('step1-message');
+    if (!message) {
+        message = document.createElement('p');
+        message.id = 'step1-message';
+        message.className = "text-center mt-4";
+        document.getElementById('step1-content').appendChild(message);
+    }
+    message.textContent = text;
+    message.className = `text-center mt-4 ${colorClass}`;
+}
+
+// Function to hide the message after switching steps
+function hideMessage() {
+    const message = document.getElementById('step1-message');
+    if (message) {
+        setTimeout(() => {
+            message.remove();
+        }, 300); // Short delay for smooth transition
+    }
+}
+
 
   // Function to move to the previous step
   function prevStep() {
