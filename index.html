@@ -223,11 +223,40 @@
     </div>
 </div>
 
+<div class="fixed bottom-4 right-4 bg-white/50 backdrop-blur-md font-semibold px-1 py-1 rounded-lg shadow-md z-50  
+            w-[110px] sm:w-[130px] md:w-[150px] lg:w-[170px] xl:w-[190px] text-center">
+    <p class="text-[9px] sm:text-[10px] md:text-xs font-semibold leading-tight">Casiguran, Sorsogon</p>
+    <div id="weather" class="text-[7px] sm:text-[9px] md:text-[10px] lg:text-xs leading-tight mt-0.5">Loading...</div>
+</div>
+
 
     <!-- ==================== -->
     <!-- Scripts -->
     <!-- ==================== -->
     <script>
+        
+const apiKey = "5b2bda7b34854010bc8112349252703"; // Your WeatherAPI Key
+        const city = "Casiguran, Sorsogon";
+        const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}`;
+
+        async function getWeather() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error(`API Error: ${response.status} ${response.statusText}`);
+
+                const data = await response.json();
+                document.getElementById("weather").innerHTML = `
+                    <img src="https:${data.current.condition.icon}" alt="Weather icon" class="mx-auto w-12 h-12">
+                    <p class="text-sm font-bold">${data.current.temp_c}°C</p>
+                `;
+            } catch (error) {
+                console.error("Error fetching weather data:", error);
+                document.getElementById("weather").innerHTML = "<p class='text-red-500 text-xs'>Failed to load.</p>";
+            }
+        }
+
+        getWeather();
+        
         // Mobile Menu Functionality
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
